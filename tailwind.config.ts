@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,28 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Cultural color themes
+				bantu: {
+					DEFAULT: '#5B3A29', // Earth brown
+					light: '#8A6E58',
+					dark: '#3E2A1C',
+					accent: '#4A7C59', // Forest green
+					pattern: '#9B7653', // Banana leaf brown
+				},
+				nilotic: {
+					DEFAULT: '#456990', // Pastoral blue
+					light: '#7EA3CC',
+					dark: '#2A4056',
+					accent: '#68A691', // Grazing green
+					pattern: '#E4B363', // Shield gold
+				},
+				cushitic: {
+					DEFAULT: '#D9A566', // Desert sand
+					light: '#F2C18D',
+					dark: '#B07D3B',
+					accent: '#E76F51', // Warm terracotta
+					pattern: '#F4A261', // Desert orange
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +107,27 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+			},
+			backgroundImage: {
+				'bantu-pattern': "url('/patterns/bantu-pattern.svg')",
+				'nilotic-pattern': "url('/patterns/nilotic-pattern.svg')",
+				'cushitic-pattern': "url('/patterns/cushitic-pattern.svg')",
 			}
 		}
 	},
